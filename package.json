@@ -2,13 +2,18 @@
   "scripts": {
     "dev": "next dev",
     "build": "gulp build && next build",
-    "export": "gulp build && next build && next export",
-    "deploy": "npm run export && touch out/.nojekyll && gh-pages -d out",
+    "export": "gulp build && next build",
+    "deploy": "npm run export && touch out/.nojekyll && gh-pages -d out --dotfiles",    
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "gulp": "gulp",
     "watch": "gulp watch"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
